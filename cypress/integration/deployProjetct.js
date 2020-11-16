@@ -17,6 +17,9 @@ describe("Verifica se foi feito o deploy do frontend no Heroku", () => {
   });
 
   it('Será validado que é possível fazer cadastro de um cliente com sucesso e ser redirecionado para tela de produtos', () => {
+    console.log('---URL DO AVALIADOR---');
+    console.log(FRONT_URL);
+    console.log('---URL DO AVALIADOR---');
     let randomEmail = internet.email();
     clickButton('[data-testid="no-account-btn"]');
     verifyContainsUrl(`${FRONT_URL}/register`);
